@@ -27,13 +27,13 @@
                         </svg>
                         <span>Plants</span>
                     </span>
-                    <nav class="menu">
-                        <ul class="menu-list">
-                            <li><a href="#welcome">Home</a></li>
-                            <li><a href="#about">About us</a></li>
-                            <li><a href="#service">Service</a></li>
-                            <li><a href="#price">Price</a></li>
-                            <li><a href="#contacts">Contacts</a></li>
+                    <nav>
+                        <ul class="menu">
+                            <li class="menu-item"><a class="menu-link" href="#welcome">Home</a></li>
+                            <li class="menu-item"><a class="menu-link" href="#about">About us</a></li>
+                            <li class="menu-item"><a class="menu-link" href="#service">Service</a></li>
+                            <li class="menu-item"><a class="menu-link" href="#price">Price</a></li>
+                            <li class="menu-item"><a class="menu-link" href="#contacts">Contacts</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -78,9 +78,9 @@
                         <div class="service-header">
                             <h2>Service and our projects</h2>
                             <span class="service-btn">
-                                <button class="btn-base">Gardens</button>
-                                <button class="btn-base">Lawn</button>
-                                <button class="btn-base">Planting</button>
+                                <button class="btn-base"><span class="gardens">Gardens</span></button>
+                                <button class="btn-base"><span class="lawn">Lawn</span></button>
+                                <button class="btn-base"><span class="planting">Planting</span></button>
                             </span>
                         </div>
                         <div class="service-container">
@@ -145,10 +145,9 @@
                                             and more
                                             recently</p>
                                         <p class="box-price"><span>$</span><span>15</span> / per hour</p>
-                                        <button class="box-btn">Order</button>
+                                        <span class="box-btn">Order</span>
                                     </div>
                                 </div>
-
                                 <input type="radio" name="accordion" id="standart">
                                 <div class="box">
                                     <label class="box-title" for="standart">Standard</label>
@@ -158,10 +157,9 @@
                                             and more
                                             recently</p>
                                         <p class="box-price"><span>$</span><span>25</span> / per hour</p>
-                                        <button class="box-btn">Order</button>
+                                        <span class="box-btn">Order</span>
                                     </div>
                                 </div>
-
                                 <input type="radio" name="accordion" id="pro">
                                 <div class="box">
                                     <label class="box-title" for="pro">Pro care</label>
@@ -169,7 +167,7 @@
                                     <div class="box-content">
                                         <p class="box-text">Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
                                         <p class="box-price"><span>$</span><span>35</span> / per hour</p>
-                                        <button class="box-btn">Order</button>
+                                        <span class="box-btn">Order</span>
                                     </div>
                                 </div>
                                 <input type="radio" name="accordion" id="close">
@@ -177,8 +175,8 @@
                         </div>
                         <div class="call-us-container">
                             <div class="call-us-text">
-                                <h2>Our best <span class="select-txt">gardeners</span> are ready to help you</h2>
-                                <button class="btn-base">Contact us</button>
+                                <h3>Our best <span class="select-txt">gardeners</span> are ready to help you</h3>
+                                <button class="btn-base"><span class="contact-us">Contact us</span></button>
                             </div>
                             <img src="img/leafs_sm.png" alt="leafs">
                         </div>
@@ -200,7 +198,7 @@
                                 <div class="select-option">New York City</div>
                                 <div class="select-option">Yonkers, NY</div>
                                 <div class="select-option">Sherrill, NY</div>
-                            </div>                             
+                            </div>                               
                         </div>
                     </div>
                 </div>
@@ -212,9 +210,9 @@
                     <div class="footer-data">
                         <span>©</span>
                         <span>2022</span>
-                        <span><a target="_blank" href="https://github.com/irvelds" target="_blank">github</a></span>
+                        <span><a target="_blank" href="https://github.com/irvelds">github</a></span>
                     </div>
-                    <p class="footer-text"><a target="_blank" href="https://rs.school">Rolling Scopes School</a></p>
+                    <p class="footer-text"><a target="_blank" href="https://rs.school/js-stage0/">Rolling Scopes School</a></p>
                     <ul class="footer-social-list">
                         <li><a href="https://pinterest.com/"><img src="img/inst.svg" alt="instagram"></a></li>
                         <li><a href="https://twitter.com "><img src="img/fb.svg" alt="facebook"></a></li>
@@ -225,7 +223,6 @@
             </div>
         </footer>
     </div>
-   
 </body>
 
 </html>

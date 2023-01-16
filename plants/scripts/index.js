@@ -34,3 +34,33 @@ console.log(
     '    - обязательное требование к интерактивности: плавное изменение внешнего вида элемента при наведении и клике не влияющее на соседние элементы +5\n' +
     ' Оценка за задание: 110 баллов'
 )
+
+/* Menu Button Scripts */
+const menuButton = document.querySelector('.menu-btn');
+const menu = document.querySelector('.nav-menu');
+const overlay = document.querySelector('.overlay');
+const body = document.querySelector('body');
+const menuItems = document.querySelectorAll('.menu-item');
+
+function toggleMenu() {
+    menuButton.classList.toggle("open");
+    menu.classList.toggle('active');
+    overlay.classList.toggle('show');
+    body.classList.toggle('hidden');
+}
+
+menuButton.addEventListener('click', toggleMenu);
+
+[...menuItems].forEach((item) => {
+    item.addEventListener('click', toggleMenu);
+})
+
+document.addEventListener('click', (e) => {
+    const overlayPath = e.composedPath().includes(overlay);
+    if (overlayPath) {
+        toggleMenu()
+    }
+})
+
+
+

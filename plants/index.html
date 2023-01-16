@@ -12,22 +12,16 @@
 </head>
 
 <body>
+    <div class="overlay"></div>
     <div class="wrapper-bg">
         <header class="header">
-            <div class="wrapper">
+            <div class="container">
                 <div class="wrapper-header">
-                    <span class="logo-container">
-                        <svg width="20" height="20" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M2.52667 20.9466L10.9212 3.66409C10.9212 3.66409 3.57596 7.00909 2.00199 10.9116C0.428017 14.8141 0.927102 18.4038 2.00201 20.9466"
-                                stroke="#499A18" stroke-linecap="round" stroke-linejoin="round" />
-                            <path
-                                d="M1.99646 20.9925C1.99646 20.9925 27.7102 -8.60087 19.3157 4.2216C10.9212 17.0441 20.1707 6.63145 15.4973 14.0678C10.824 21.5041 1.99646 20.9925 1.99646 20.9925Z"
-                                stroke="#499A18" stroke-linejoin="round" />
-                        </svg>
-                        <span>Plants</span>
-                    </span>
-                    <nav>
+                    <div class="logo-container">
+                        <img src="img/logo_vector.png" alt="logo">
+                        <div>Plants</div>
+                    </div>
+                    <nav class="nav-menu">
                         <ul class="menu">
                             <li class="menu-item"><a class="menu-link" href="#welcome">Home</a></li>
                             <li class="menu-item"><a class="menu-link" href="#about">About us</a></li>
@@ -36,14 +30,18 @@
                             <li class="menu-item"><a class="menu-link" href="#contacts">Contacts</a></li>
                         </ul>
                     </nav>
+                    <div class="menu-btn">
+                        <span></span>
+                        <span></span>
+                    </div>
                 </div>
             </div>
         </header>
         <main class="main">
             <section class="welcome" id="welcome">
-                <div class="wrapper">
-                    <div class="wrapper-welcome">
-                        <img class="welcome-img" src="img/leafs.png" alt="leafs">
+                <div class="container">
+                    <div class="wrapper-welcome"> 
+                        <div class="welcome-img"><img src="img/leafs.png" alt="leafs"></div>
                         <div class="welcome-container">
                             <h1>We grow <span class="select-txt">plants</span> and give you oxygen</h1>
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
@@ -55,7 +53,7 @@
                 </div>
             </section>
             <section class="about" id="about">
-                <div class="wrapper">
+                <div class="container">
                     <div class="wrapper-about">
                         <div class="about-container">
                             <h2><span class="select-txt">We are</span> professional<br> experienced <span
@@ -73,7 +71,7 @@
                 </div>
             </section>
             <section class="service" id="service">
-                <div class="wrapper">
+                <div class="container">
                     <div class="wrapper-service">
                         <div class="service-header">
                             <h2>Service and our projects</h2>
@@ -85,42 +83,48 @@
                         </div>
                         <div class="service-container">
                             <div class="service-item">
-                                <img src="img/garden_care1.png" alt="garden_care">
+                                <img src="img/garden_care1.png" class="img-lg" alt="garden_care">
+                                <img src="img/garden_care1_sm.png" class="img-sm" alt="garden_care">
                                 <div class="service-content">
                                     <h5>Garden care</h5>
                                     <p>Lorem Ipsum has been the industry</p>
                                 </div>
                             </div>
                             <div class="service-item">
-                                <img src="img/planting1.png" alt="planting">
+                                <img src="img/planting1.png" class="img-lg" alt="planting">
+                                <img src="img/planting1_sm.png" class="img-sm" alt="planting">
                                 <div class="service-content">
                                     <h5>Planting</h5>
                                     <p>Lorem Ipsum has been the industry</p>
                                 </div>
                             </div>
                             <div class="service-item">
-                                <img src="img/lawn_care1.png" alt="lawn care">
+                                <img src="img/lawn_care1.png" class="img-lg" alt="lawn care">
+                                <img src="img/lawn_care1_sm.png" class="img-sm" alt="lawn care">
                                 <div class="service-content">
                                     <h5>Lawn care</h5>
                                     <p>Lorem Ipsum has been the industry</p>
                                 </div>
                             </div>
                             <div class="service-item">
-                                <img src="img/planting2.png" alt="planting">
+                                <img src="img/planting2.png" class="img-lg" alt="planting">
+                                <img src="img/planting2_sm.png" class="img-sm" alt="planting">
                                 <div class="service-content">
                                     <h5>Planting</h5>
                                     <p>Lorem Ipsum has been the industry</p>
                                 </div>
                             </div>
                             <div class="service-item">
-                                <img src="img/garden_care2.png" alt="garden_care">
+                                <img src="img/garden_care2.png" class="img-lg" alt="garden_care">
+                                <img src="img/garden_care2_sm.png" class="img-sm" alt="garden_care">
                                 <div class="service-content">
                                     <h5>Garden care</h5>
                                     <p>Lorem Ipsum has been the industry</p>
                                 </div>
                             </div>
                             <div class="service-item">
-                                <img src="img/planting3.png" alt="planting">
+                                <img src="img/planting3.png" class="img-lg" alt="planting">
+                                <img src="img/planting3_sm.png" class="img-sm" alt="planting">
                                 <div class="service-content">
                                     <h5>Planting</h5>
                                     <p>Lorem Ipsum has been the industry</p>
@@ -131,7 +135,7 @@
                 </div>
             </section>
             <section class="price" id="price">
-                <div class="wrapper">
+                <div class="container">
                     <div class="wrapper-price">
                         <div class="price-container">
                             <h2>Prices</h2>
@@ -184,9 +188,9 @@
                 </div>
             </section>
             <section class="contacts" id="contacts">
-                <div class="wrapper">
+                <div class="container">
                     <div class="wrapper-contacts">
-                        <img src="img/contact_woman.png" alt="contact_img">
+                        <img class="img-lg" src="img/contact_woman.png" alt="Contact us">
                         <h2>Contact us</h2>
                         <div class="select">
                             <div class="select-header">
@@ -198,21 +202,33 @@
                                 <div class="select-option">New York City</div>
                                 <div class="select-option">Yonkers, NY</div>
                                 <div class="select-option">Sherrill, NY</div>
-                            </div>                               
+                            </div>  
+                            <div class="city-card">
+                                <div class="info-city">
+                                    <div class="city-caption">City:</div>
+                                    <div class="city-text">Canandaigua, NY</div>
+                                    <div class="city-caption">Phone:</div>
+                                    <div class="city-text">+1 585 393 0001</div>
+                                    <div class="city-caption">Office adress:</div>
+                                    <div class="city-text">151 Charlotte Street</div>
+                                    <button class="btn-second">Call us</button>
+                                </div>
+                            </div>                                    
                         </div>
+                        <img class="img-sm" src="img/contact_woman.png" alt="Contact us">
                     </div>
                 </div>
             </section>
         </main>
         <footer class="footer">
-            <div class="wrapper">
+            <div class="container">
                 <div class="wrapper-footer">
                     <div class="footer-data">
                         <span>©</span>
                         <span>2022</span>
                         <span><a target="_blank" href="https://github.com/irvelds">github</a></span>
                     </div>
-                    <p class="footer-text"><a target="_blank" href="https://rs.school/js-stage0/">Rolling Scopes School</a></p>
+                    <a target="_blank" class="footer-text" href="https://rs.school/js-stage0/">Rolling Scopes School</a>
                     <ul class="footer-social-list">
                         <li><a href="https://pinterest.com/"><img src="img/inst.svg" alt="instagram"></a></li>
                         <li><a href="https://twitter.com "><img src="img/fb.svg" alt="facebook"></a></li>

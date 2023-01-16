@@ -37,14 +37,15 @@ const body = document.querySelector('body');
 const menuItems = document.querySelectorAll('.menu-item');
 
 function toggleMenu() {
-    menuButton.classList.toggle("open");
-    menu.classList.toggle('active');
-    overlay.classList.toggle('show');
-    body.classList.toggle('hidden');
+  if (getComputedStyle(menuButton).display === 'block') {
+        menuButton.classList.toggle("open");
+        menu.classList.toggle('active');
+        overlay.classList.toggle('show');
+        body.classList.toggle('hidden');
+    }
 }
 
 menuButton.addEventListener('click', toggleMenu);
-
 [...menuItems].forEach((item) => {
     item.addEventListener('click', toggleMenu);
 })

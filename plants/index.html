@@ -76,21 +76,21 @@
                         <div class="service-header">
                             <h2>Service and our projects</h2>
                             <span class="service-btn">
-                                <button class="btn-base"><span class="gardens">Gardens</span></button>
-                                <button class="btn-base"><span class="lawn">Lawn</span></button>
-                                <button class="btn-base"><span class="planting">Planting</span></button>
+                                <button class="btn-base" id="gardens"><span class="gardens">Gardens</span></button>
+                                <button class="btn-base" id="lawn"><span  class="lawn">Lawn</span></button>
+                                <button class="btn-base" id="planting"><span class="planting">Planting</span></button>
                             </span>
                         </div>
                         <div class="service-container">
-                            <div class="service-item">
-                                <img src="img/garden_care1.png" class="img-lg" alt="garden_care">
+                            <div class="service-item gardens-item">
+                                <img src="img/garden_care1.png" class="img-lg"  alt="garden_care">
                                 <img src="img/garden_care1_sm.png" class="img-sm" alt="garden_care">
                                 <div class="service-content">
                                     <h5>Garden care</h5>
                                     <p>Lorem Ipsum has been the industry</p>
                                 </div>
                             </div>
-                            <div class="service-item">
+                            <div class="service-item planting-item">
                                 <img src="img/planting1.png" class="img-lg" alt="planting">
                                 <img src="img/planting1_sm.png" class="img-sm" alt="planting">
                                 <div class="service-content">
@@ -98,7 +98,7 @@
                                     <p>Lorem Ipsum has been the industry</p>
                                 </div>
                             </div>
-                            <div class="service-item">
+                            <div class="service-item lawn-item">
                                 <img src="img/lawn_care1.png" class="img-lg" alt="lawn care">
                                 <img src="img/lawn_care1_sm.png" class="img-sm" alt="lawn care">
                                 <div class="service-content">
@@ -106,7 +106,7 @@
                                     <p>Lorem Ipsum has been the industry</p>
                                 </div>
                             </div>
-                            <div class="service-item">
+                            <div class="service-item planting-item">
                                 <img src="img/planting2.png" class="img-lg" alt="planting">
                                 <img src="img/planting2_sm.png" class="img-sm" alt="planting">
                                 <div class="service-content">
@@ -114,7 +114,7 @@
                                     <p>Lorem Ipsum has been the industry</p>
                                 </div>
                             </div>
-                            <div class="service-item">
+                            <div class="service-item gardens-item">
                                 <img src="img/garden_care2.png" class="img-lg" alt="garden_care">
                                 <img src="img/garden_care2_sm.png" class="img-sm" alt="garden_care">
                                 <div class="service-content">
@@ -122,7 +122,7 @@
                                     <p>Lorem Ipsum has been the industry</p>
                                 </div>
                             </div>
-                            <div class="service-item">
+                            <div class="service-item planting-item">
                                 <img src="img/planting3.png" class="img-lg" alt="planting">
                                 <img src="img/planting3_sm.png" class="img-sm" alt="planting">
                                 <div class="service-content">
@@ -149,7 +149,7 @@
                                             and more
                                             recently</p>
                                         <p class="box-price"><span>$</span><span>15</span> / per hour</p>
-                                        <span class="box-btn">Order</span>
+                                        <button class="box-btn">Order</button>
                                     </div>
                                 </div>
                                 <input type="radio" name="accordion" id="standart">
@@ -161,7 +161,7 @@
                                             and more
                                             recently</p>
                                         <p class="box-price"><span>$</span><span>25</span> / per hour</p>
-                                        <span class="box-btn">Order</span>
+                                        <button class="box-btn">Order</button>
                                     </div>
                                 </div>
                                 <input type="radio" name="accordion" id="pro">
@@ -171,7 +171,7 @@
                                     <div class="box-content">
                                         <p class="box-text">Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
                                         <p class="box-price"><span>$</span><span>35</span> / per hour</p>
-                                        <span class="box-btn">Order</span>
+                                        <button class="box-btn">Order</button>
                                     </div>
                                 </div>
                                 <input type="radio" name="accordion" id="close">
@@ -203,19 +203,20 @@
                                 <div class="select-option">Yonkers, NY</div>
                                 <div class="select-option">Sherrill, NY</div>
                             </div>  
-                            <div class="city-card">
+                            <div class="city-card hidden">
                                 <div class="info-city">
                                     <div class="city-caption">City:</div>
-                                    <div class="city-text">Canandaigua, NY</div>
+                                    <div class="city-text name">Canandaigua, NY</div>
                                     <div class="city-caption">Phone:</div>
-                                    <div class="city-text">+1 585 393 0001</div>
+                                    <div class="city-text phone">+1 585 393 0001</div>
                                     <div class="city-caption">Office adress:</div>
-                                    <div class="city-text">151 Charlotte Street</div>
+                                    <div class="city-text adress">151 Charlotte Street</div>
                                     <button class="btn-second">Call us</button>
                                 </div>
                             </div>                                    
                         </div>
                         <img class="img-sm" src="img/contact_woman.png" alt="Contact us">
+                        <img class="img-xs" src="img/contact_woman.png" alt="Contact us">
                     </div>
                 </div>
             </section>

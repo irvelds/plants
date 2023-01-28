@@ -62,6 +62,10 @@
 
 /*Global*/
 
+:focus {
+  outline: none !important;
+}
+
 html {
   box-sizing: border-box;
   background-color: #ffffff;
@@ -124,10 +128,56 @@ body {
   transition: all ease 0.4s;
 }
 
+
+/* .btn-base:focus,
+.btn-second:focus {
+  background: transparent;
+  color: #e06733;
+  border: 1px solid #e06733;
+  transition: .3s linear;
+} */
+
+
+
+
 .btn-base:hover,
 .btn-second:hover {
   background: #e06733;
   color: #ffffff;
+  border: 1px solid #e06733;
+  transition: .4s linear;
+}
+
+
+/* .btn-base:active {
+  background: #edf2ec;
+  transition: .4s linear;
+} */
+
+
+
+.btn-base.service-active {
+  background: #e06733;
+  color: #ffffff;
+  transition: .4s linear;
+}
+
+
+
+
+
+
+
+button:disabled:hover,
+button[disabled]:hover {
+  background: transparent;
+  border: 1px solid #e06733;
+  color: #e06733;
+}
+
+button:disabled,
+button[disabled] {
+  opacity: 0.7;
 }
 
 .btn-base .gardens,
@@ -175,7 +225,10 @@ a {
   background: #ffffff;
 }
 
-.img-sm {
+
+
+.img-sm, 
+.img-xs {
   display: none;
 }
 
@@ -384,7 +437,16 @@ a {
   flex-direction: column;
   width: 330px;
   height: 450px;
+  transition: 0.5s;
 }
+
+
+.service-item-blur {
+  transition: filter 1s;
+  filter: blur(2px);
+}
+
+;
 
 .service-content {
   flex-grow: 1;
@@ -535,7 +597,16 @@ a {
   background: #ffffff;
   border-radius: 10px;
   border: none;
+  cursor: pointer;
 }
+
+.box-btn:hover {
+  background: #e06733;
+  color: #ffffff;
+}
+
+
+
 
 .accordion input:checked+.box {
   height: 154px;
@@ -666,8 +737,12 @@ a {
   background: #EDF2EC;
   border: 1px solid #000000;
   border-radius: 20px;
+}
+
+.city-card.hidden {
   display: none;
 }
+
 
 .info-city {
   display: grid;
@@ -682,6 +757,7 @@ a {
   margin-left: 33px;
   align-items: center;
 }
+
 
 .city-caption {
   font-family: 'Inter';
@@ -735,6 +811,8 @@ a {
 
 .select.is-active .select-options {
   display: block;
+  opacity: 1;
+  transition: all ease 0.4s;
 }
 
 .select-header {
@@ -814,7 +892,10 @@ a {
   background: #DCE9D9;
   border: 1px solid #DCE9D9;
   border-top: none;
+  opacity: 0;
+  transition: all ease 0.4s;
 }
+
 
 .select-option {
   padding: 8px;
@@ -1073,6 +1154,7 @@ ul.footer-social-list li {
   .wrapper-contacts .img-sm {
     width: 200px;
     margin-left: 20px;
+    margin-top: 95px;
   }
 
   .contacts h2 {
@@ -1080,7 +1162,22 @@ ul.footer-social-list li {
   }
 
   .select {
-    margin: 60px 0 195px 2px;
+    /* margin: 60px 0 195px 2px; */
+    margin: 20px 0 195px 2px;
+  }
+
+  .select-current {
+    width: 204px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    color: #717171;
+  }
+
+  .city-card {
+    top: 110px;
   }
 
   /*Img*/
@@ -1123,12 +1220,14 @@ ul.footer-social-list li {
   .container {
     padding: 0 25px;
   }
+
   .btn-second {
     width: 100px;
     height: 34px;
     font-size: 10px;
     line-height: 20px;
   }
+
   .btn-base {
     width: 121px;
     height: 34px;
@@ -1336,13 +1435,19 @@ ul.footer-social-list li {
     padding: 0 0px;
     flex-direction: column;
     align-items: center;
-    margin-right: 4px;
   }
 
   .wrapper-contacts .img-sm {
-    width: 100px;
-    margin-left: 0;
+   display: none;
   }
+
+  .wrapper-contacts .img-xs {
+    display: block;
+    width: 100px;
+    margin-left: 20px;
+    margin-top: 95px;
+  }
+
 
   .contacts h2 {
     margin: 15px auto;
@@ -1350,13 +1455,45 @@ ul.footer-social-list li {
   }
 
   .select {
-    margin: 57px 0 79px 0;
+    /* margin: 57px 0 79px 0; */
+    margin: 20px 0 79px 0;
   }
 
   .select-header {
     width: 300px;
     padding: 0 10px 0 20px;
   }
+
+  .select-options {
+    width: 300px;
+    line-height: 35px;
+  }
+
+.info-city {
+  grid-template-columns: 65px 1fr;
+  width: auto;
+  margin-right: 15px;
+}
+
+.city-card .btn-second {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  justify-self: center;
+}
+
+.city-card {
+  top: 100px;
+  width: 282px;
+  left: 10px;
+}
+.city-text {
+  width: 150px;
+}
+
+.info-city:last-child .city-text,
+.info-city:last-child .city-caption{
+  line-height: 20px;
+}
 
   /*Footer*/
   .footer {

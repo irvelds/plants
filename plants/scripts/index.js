@@ -136,9 +136,10 @@ serviceBtn.forEach(e => {
 function select() {
 
   const cityCard = document.querySelector('.city-card');
-  const cityName = document.querySelector(".city-text.name");
-  const cityPhone = document.querySelector(".city-text.phone");
-  const cityAdress = document.querySelector(".city-text.adress");
+  const cityName = document.querySelector(".city-name");
+  const cityPhone = document.querySelector(".city-phone");
+  const cityAdress = document.querySelector(".city-adress");
+  const cityCallUs = document.querySelector(".call-us");
   const selectOptions = document.querySelectorAll('.select-option');
   const selectHeader = document.querySelector('.select-header');
   const contactsImg = document.querySelector('.wrapper-contacts .img-xs');
@@ -157,21 +158,25 @@ function select() {
       cityName.innerText = "Canandaigua, NY";
       cityPhone.innerText = "+1 585 393 0001";
       cityAdress.innerText = "151 Charlotte Street";
+      cityCallUs.href = "tel:+1-585-393-0001"; 
     }
     if (text === 'New York City') {
       cityName.innerText = "New York City";
       cityPhone.innerText = "+1	212	456 0002";
       cityAdress.innerText = "9 East 91st Street";
+      cityCallUs.href = "tel:+1-212-456-0002"; 
     }
     if (text === 'Yonkers, NY') {
       cityName.innerText = "Yonkers, NY";
       cityPhone.innerText = "+1	914	678 0003";
       cityAdress.innerText = "511 Warburton Ave";
+      cityCallUs.href = "tel:+1-914-678-0003"; 
     }
     if (text === 'Sherrill, NY') {
       cityName.innerText = "Sherrill, NY";
-      cityPhone.innerText = "+1	315	908 0004";
+      cityPhone.innerText = "+1 315 908 0004";
       cityAdress.innerText = "14 WEST Noyes BLVD";
+      cityCallUs.href = "tel:+1-315-908-0004"; 
     }
   }
 

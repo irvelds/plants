@@ -112,56 +112,43 @@ serviceBtn.forEach(e => {
 })
 
 
-
-
 /* cityCard Scripts */
+const cityCard = document.querySelector('.city-card');
+const cityName = document.querySelector(".city-name");
+const cityPhone = document.querySelector(".city-phone");
+const cityAdress = document.querySelector(".city-adress");
+const cityCallUs = document.querySelector(".call-us");
+const selectOptions = document.querySelectorAll('.select-option');
+const selectHeader = document.querySelector('.select-header');
+const contactsImg = document.querySelector('.wrapper-contacts .img-xs');
 
+const cityObject = [
+  { name: 'Canandaigua, NY', phone: '+1 585 393 0001', adress: '151 Charlotte Street' },
+  { name: 'New York City', phone: '+1	212	456 0002', adress: '9 East 91st Street' },
+  { name: 'Yonkers, NY', phone: '+1	914	678 0003', adress: '511 Warburton Ave' },
+  { name: 'Sherrill, NY', phone: '+1 315 908 0004', adress: '14 WEST Noyes BLVD' }
+]
 
 function select() {
-
-  const cityCard = document.querySelector('.city-card');
-  const cityName = document.querySelector(".city-name");
-  const cityPhone = document.querySelector(".city-phone");
-  const cityAdress = document.querySelector(".city-adress");
-  const cityCallUs = document.querySelector(".call-us");
-  const selectOptions = document.querySelectorAll('.select-option');
-  const selectHeader = document.querySelector('.select-header');
-  const contactsImg = document.querySelector('.wrapper-contacts .img-xs');
-
+  
   function selectOption() {
-    let text = this.innerText,
-      select = this.closest('.select'),
-      currentText = select.querySelector('.select-current');
+    let text = this.innerText;
+    let select = this.closest('.select');
+    let currentText = select.querySelector('.select-current');
     currentText.innerText = text;
     select.classList.remove('is-active');
     select.classList.add('is-select');
-    contactsImg.style.visibility = "hidden";
     cityCard.classList.remove('hidden');
 
-    if (text === 'Canandaigua, NY') {
-      cityName.innerText = "Canandaigua, NY";
-      cityPhone.innerText = "+1 585 393 0001";
-      cityAdress.innerText = "151 Charlotte Street";
-      cityCallUs.href = "tel:+1-585-393-0001"; 
-    }
-    if (text === 'New York City') {
-      cityName.innerText = "New York City";
-      cityPhone.innerText = "+1	212	456 0002";
-      cityAdress.innerText = "9 East 91st Street";
-      cityCallUs.href = "tel:+1-212-456-0002"; 
-    }
-    if (text === 'Yonkers, NY') {
-      cityName.innerText = "Yonkers, NY";
-      cityPhone.innerText = "+1	914	678 0003";
-      cityAdress.innerText = "511 Warburton Ave";
-      cityCallUs.href = "tel:+1-914-678-0003"; 
-    }
-    if (text === 'Sherrill, NY') {
-      cityName.innerText = "Sherrill, NY";
-      cityPhone.innerText = "+1 315 908 0004";
-      cityAdress.innerText = "14 WEST Noyes BLVD";
-      cityCallUs.href = "tel:+1-315-908-0004"; 
-    }
+    contactsImg.style.visibility = "hidden";
+    
+    const selectCityObject = cityObject.filter(val => {
+      return val.name === text;
+    })
+    cityName.innerText = selectCityObject[0].name;
+    cityPhone.innerText = selectCityObject[0].phone;
+    cityAdress.innerText = selectCityObject[0].adress;
+    cityCallUs.href = `tel:${selectCityObject[0].phone}`;
   }
 
   selectHeader.addEventListener('click', (e => {
@@ -173,15 +160,9 @@ function select() {
     option.addEventListener('click', selectOption)
   });
 
-
-
 };
 
-
 select();
-
-
-
 
 
 
